@@ -7,6 +7,7 @@ from .forms import UploadFileForm
 from .models import Document
 from django.core.urlresolvers import reverse_lazy
 from django.template import RequestContext
+from .function import *
 
 # Create your views here.
 
@@ -15,12 +16,18 @@ class Bookmark_ListView(ListView):
 
 def upload_file(request):
     if request.method == 'POST':
+        #파일을 업로드한것을 가져오기 위해서는 폼에 Post request와 더불어 FILES를 반드시 같이 가져와야 한다.
         form=UploadFileForm(request.POST, request.FILES)
 
         #자신이 만든 폼의 필드는 기본값으로 required=true 로 되어 있으므로 모든 필드가 입력되지 않으면 유효하지 않다
         if form.is_valid():
             new_document=Document(file=request.FILES['file'])
-            new_document.save()
+            workbook=Excel_Handling.make_excel(new_document)
+            codes=Excel_Handling.get_code(workbook)
+
+            return render(request, 'estimation/code_selection.html', {'codes':codes, 'file':new_document})
+
+            #new_document.save()
 
             #reverse를 이용해서 http response를 해줄때는 urls.py 에 정의한 name을 이용해서 간편하게 원하는 주소로 redirect 시켜준다.
             return HttpResponseRedirect(reverse_lazy('estimation:upload'))
@@ -31,3 +38,5 @@ def upload_file(request):
 
 
     return render(request,'estimation/upload_file.html',{'documents':documents, 'form':form})
+
+
