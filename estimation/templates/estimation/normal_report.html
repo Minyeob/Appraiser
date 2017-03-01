@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ normal_report }}</title>
+</head>
+<body>
+    <h4>{{ code }}</h4>
+    {% for creditor in creditors %}
+        <ul>{{ creditor }}</ul>
+    {% endfor %}
+</body>
+</html>
