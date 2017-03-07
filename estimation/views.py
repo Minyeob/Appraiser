@@ -17,6 +17,7 @@ from django import shortcuts
 class Bookmark_ListView(ListView):
     model = Bookmark
 
+#get으로 해당 페이지에 접속하면 파일을 업로드할 수 있는 폼을 제공, 파일을 업로드해서 업로드버튼을 누르면 해당 파일에 있는 데이터로 각 사건에 대해 보기를 제공
 def upload_file(request):
     if request.method == 'POST':
         form=UploadFileForm(request.POST, request.FILES)
@@ -25,11 +26,12 @@ def upload_file(request):
         if form.is_valid():
             new_document=Document(file=request.FILES['file'])
             new_document.title=new_document.file.name
-            worksheet =excel_handling().make_file(new_document.file)
-            normal_datas=excel_handling().get_normal(worksheet)
-            normal_codes=excel_handling().get_code_normal(worksheet)
+            workbook =excel_handling().make_file(new_document.file)
+            normal_datas=excel_handling().get_normal(workbook)
+            normal_codes=excel_handling().get_code_normal(workbook)
             normals=zip(normal_datas, normal_codes)
             file=Document.objects.filter(title=new_document.title)
+            #해당파일이 이미 존재하면 저장하지 않고 해당파일이 없다면 해당 파일의 데이터 모델을 저장한다
             if(len(file)==0):
                 new_document.save()
 
@@ -42,10 +44,31 @@ def upload_file(request):
 
     return render(request,'estimation/upload_file.html',{'documents':documents, 'form':form})
 
+#탁감 보고서를 작성하기 위해 엑셀데이터에서 필요한 데이터를 추출해서 html 페이지로 데이터를 보내준다
 def show_normal_report(request, code):
     name=request.GET['title']
     file=Document.objects.get(title=name)
-    worksheet = excel_handling().make_file(file.file)
-    creditors=excel_handling().get_creditor(worksheet)
+    loc=0;
+    workbook = excel_handling().make_file(file.file)
+    #모든 데이터로 데이터 집합을 구해 보통 같은 행의 데이터는 하나의 대상에 대한 곧통의 데이터를 가르키므로 해당 행의 위치를 구해 나머지도 구한다
+    codes = excel_handling().get_code_all(workbook)
+    while(loc<len(codes)):
+        if(codes[loc]==code):
+            break
+        else:
+            loc=loc+1
+    borrow_name=excel_handling().get_borrower(workbook, loc)    #Borrow Name
+    program_title=excel_handling().get_program_title(workbook)  #Program
+    property_control_no=excel_handling().get_property_control(workbook,loc) #Property Control No
+    court=excel_handling().get_court(workbook,loc)  #관할법원
+    case=excel_handling().get_case_number(workbook, loc)    #사건번호
+    borrower_num=excel_handling().get_borrower_num(workbook, loc)   #차주일련번호
+    opb=excel_handling().get_opb(workbook, borrower_num)    #OPB
+    interest=excel_handling().get_overdue_interest(workbook, borrower_num)  #연체이자
+    setup_price=excel_handling().get_setup_price(workbook, loc) #설정액
+    address=excel_handling().get_full_address(workbook, loc)    #Address
+    category=excel_handling().get_property_category(workbook, loc)  #Property category
 
-    return render(request, 'estimation/normal_report.html',{'code':code,'creditors':creditors})
+    return render(request, 'estimation/normal_report.html',
+                  {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
+                   'borrower':borrower_num, 'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category})

@@ -5,9 +5,16 @@
     <title>{{ normal_report }}</title>
 </head>
 <body>
+    <h4>Program : {{ program }}</h4>
     <h4>{{ code }}</h4>
-    {% for creditor in creditors %}
-        <ul>{{ creditor }}</ul>
-    {% endfor %}
+    <h4>Borrow Name : {{ borrow_name }}</h4>
+    <h4>Property Control NO : {{ property_control_no }}</h4>
+    <h4>관할법원 : {{ court }}</h4>
+    <h4>사건번호 : {{ case }}</h4>
+    <h4>OPB : {{ opb }}</h4>
+    <h4>연체이자 : {{ interest }}</h4>
+    <h4>설정액 : {{ setup_price }}</h4>
+    <h4>Address : {{ address }}</h4>
+    <h4>Property Category:{{ category }}</h4>
 </body>
 </html>
