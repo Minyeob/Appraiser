@@ -7,14 +7,10 @@ from .forms import UploadFileForm
 from .models import Document
 from django.core.urlresolvers import reverse_lazy
 from django.template import RequestContext
-<<<<<<< HEAD
 from .functiom import *
 import xlrd
 from django import shortcuts
 
-=======
-from .function import *
->>>>>>> master
 
 # Create your views here.
 
@@ -24,13 +20,11 @@ class Bookmark_ListView(ListView):
 #get으로 해당 페이지에 접속하면 파일을 업로드할 수 있는 폼을 제공, 파일을 업로드해서 업로드버튼을 누르면 해당 파일에 있는 데이터로 각 사건에 대해 보기를 제공
 def upload_file(request):
     if request.method == 'POST':
-        #파일을 업로드한것을 가져오기 위해서는 폼에 Post request와 더불어 FILES를 반드시 같이 가져와야 한다.
         form=UploadFileForm(request.POST, request.FILES)
 
         #자신이 만든 폼의 필드는 기본값으로 required=true 로 되어 있으므로 모든 필드가 입력되지 않으면 유효하지 않다
         if form.is_valid():
             new_document=Document(file=request.FILES['file'])
-<<<<<<< HEAD
             new_document.title=new_document.file.name
             workbook =excel_handling().make_file(new_document.file)
             normal_datas=excel_handling().get_normal(workbook)
@@ -40,14 +34,6 @@ def upload_file(request):
             #해당파일이 이미 존재하면 저장하지 않고 해당파일이 없다면 해당 파일의 데이터 모델을 저장한다
             if(len(file)==0):
                 new_document.save()
-=======
-            workbook=Excel_Handling.make_excel(new_document)
-            codes=Excel_Handling.get_code(workbook)
-
-            return render(request, 'estimation/code_selection.html', {'codes':codes, 'file':new_document})
-
-            #new_document.save()
->>>>>>> master
 
             return render(request,'estimation/code_selection.html', {'normals':normals, 'file':new_document})
 
@@ -58,7 +44,6 @@ def upload_file(request):
 
     return render(request,'estimation/upload_file.html',{'documents':documents, 'form':form})
 
-<<<<<<< HEAD
 #탁감 보고서를 작성하기 위해 엑셀데이터에서 필요한 데이터를 추출해서 html 페이지로 데이터를 보내준다
 def show_normal_report(request, code):
     name=request.GET['title']
@@ -92,6 +77,3 @@ def show_normal_report(request, code):
                   {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
                    'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'ho':ho,
                    'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil})
-=======
-
->>>>>>> master

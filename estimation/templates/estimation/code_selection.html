@@ -7,7 +7,6 @@
 <body>
 
     <div class="panel-heading">
-<<<<<<< HEAD
         <h3 class="panel-title">{{ file.title }}</h3>
 
         {% if normals %}
@@ -15,14 +14,6 @@
             <ul>
             {% for normal_data, normal_code in normals%}
                 <li><a href="/estimation/page/{{ normal_code }}?title={{ file.title }}">{{ normal_data }}</a></li>
-=======
-        <h3 class="panel-title">File Upload Form</h3>
-
-        {% if codes %}
-            <ul>
-            {% for code in codes %}
-                <li>{{ code }}</li>
->>>>>>> master
             {% endfor %}
             </ul>
         {% else %}
@@ -30,11 +21,5 @@
         {% endif %}
     </div>
 
-<<<<<<< HEAD
-=======
-    <div>
-        {{ file.name }}
-    </div>
->>>>>>> master
 </body>
 </html>
