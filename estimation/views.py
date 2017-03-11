@@ -28,7 +28,7 @@ def upload_file(request):
             new_document.title=new_document.file.name
             workbook =excel_handling().make_file(new_document.file)
             normal_datas=excel_handling().get_normal(workbook)
-            normal_codes=excel_handling().get_code_normal(workbook)
+            normal_codes=excel_handling().get_normal_code(workbook)
             normals=zip(normal_datas, normal_codes)
             file=Document.objects.filter(title=new_document.title)
             #해당파일이 이미 존재하면 저장하지 않고 해당파일이 없다면 해당 파일의 데이터 모델을 저장한다
@@ -51,24 +51,29 @@ def show_normal_report(request, code):
     loc=0;
     workbook = excel_handling().make_file(file.file)
     #모든 데이터로 데이터 집합을 구해 보통 같은 행의 데이터는 하나의 대상에 대한 곧통의 데이터를 가르키므로 해당 행의 위치를 구해 나머지도 구한다
-    codes = excel_handling().get_code_all(workbook)
+    codes = excel_handling().get_all_code(workbook)
     while(loc<len(codes)):
         if(codes[loc]==code):
             break
         else:
             loc=loc+1
-    borrow_name=excel_handling().get_borrower(workbook, loc)    #Borrow Name
+    borrow_name=excel_handling().get_render_name(workbook, loc)    #Borrow Name
     program_title=excel_handling().get_program_title(workbook)  #Program
-    property_control_no=excel_handling().get_property_control(workbook,loc) #Property Control No
+    property_control_no=excel_handling().get_property_control_no(workbook,loc) #Property Control No
     court=excel_handling().get_court(workbook,loc)  #관할법원
     case=excel_handling().get_case_number(workbook, loc)    #사건번호
-    borrower_num=excel_handling().get_borrower_num(workbook, loc)   #차주일련번호
+    borrower_num=excel_handling().get_render_index(workbook, loc)   #차주일련번호
     opb=excel_handling().get_opb(workbook, borrower_num)    #OPB
-    interest=excel_handling().get_overdue_interest(workbook, borrower_num)  #연체이자
-    setup_price=excel_handling().get_setup_price(workbook, loc) #설정액
-    address=excel_handling().get_full_address(workbook, loc)    #Address
+    interest=excel_handling().get_accured_interest(workbook, borrower_num)  #연체이자
+    setup_price=excel_handling().get_cpma(workbook, loc) #설정액
+    address=excel_handling().get_address(workbook, loc, code)    #Address
     category=excel_handling().get_property_category(workbook, loc)  #Property category
+    ho=excel_handling().get_ho(workbook, code)
+    liensize_improvement=excel_handling().get_liensize_improvement(workbook, code)
+    landsize=excel_handling().get_landsize(workbook, code)
+    utensil=excel_handling().get_utensil(workbook, loc)
 
     return render(request, 'estimation/normal_report.html',
                   {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
-                   'borrower':borrower_num, 'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category})
+                   'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'ho':ho,
+                   'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil})
