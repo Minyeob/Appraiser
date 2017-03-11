@@ -7,30 +7,35 @@ from .forms import UploadFileForm
 from .models import Document
 from django.core.urlresolvers import reverse_lazy
 from django.template import RequestContext
-from .function import *
+from .functiom import *
+import xlrd
+from django import shortcuts
+
 
 # Create your views here.
 
 class Bookmark_ListView(ListView):
     model = Bookmark
 
+#get으로 해당 페이지에 접속하면 파일을 업로드할 수 있는 폼을 제공, 파일을 업로드해서 업로드버튼을 누르면 해당 파일에 있는 데이터로 각 사건에 대해 보기를 제공
 def upload_file(request):
     if request.method == 'POST':
-        #파일을 업로드한것을 가져오기 위해서는 폼에 Post request와 더불어 FILES를 반드시 같이 가져와야 한다.
         form=UploadFileForm(request.POST, request.FILES)
 
         #자신이 만든 폼의 필드는 기본값으로 required=true 로 되어 있으므로 모든 필드가 입력되지 않으면 유효하지 않다
         if form.is_valid():
             new_document=Document(file=request.FILES['file'])
-            workbook=Excel_Handling.make_excel(new_document)
-            codes=Excel_Handling.get_code(workbook)
+            new_document.title=new_document.file.name
+            workbook =excel_handling().make_file(new_document.file)
+            normal_datas=excel_handling().get_normal(workbook)
+            normal_codes=excel_handling().get_normal_code(workbook)
+            normals=zip(normal_datas, normal_codes)
+            file=Document.objects.filter(title=new_document.title)
+            #해당파일이 이미 존재하면 저장하지 않고 해당파일이 없다면 해당 파일의 데이터 모델을 저장한다
+            if(len(file)==0):
+                new_document.save()
 
-            return render(request, 'estimation/code_selection.html', {'codes':codes, 'file':new_document})
-
-            #new_document.save()
-
-            #reverse를 이용해서 http response를 해줄때는 urls.py 에 정의한 name을 이용해서 간편하게 원하는 주소로 redirect 시켜준다.
-            return HttpResponseRedirect(reverse_lazy('estimation:upload'))
+            return render(request,'estimation/code_selection.html', {'normals':normals, 'file':new_document})
 
     else:
         form=UploadFileForm()
@@ -39,4 +44,36 @@ def upload_file(request):
 
     return render(request,'estimation/upload_file.html',{'documents':documents, 'form':form})
 
+#탁감 보고서를 작성하기 위해 엑셀데이터에서 필요한 데이터를 추출해서 html 페이지로 데이터를 보내준다
+def show_normal_report(request, code):
+    name=request.GET['title']
+    file=Document.objects.get(title=name)
+    loc=0;
+    workbook = excel_handling().make_file(file.file)
+    #모든 데이터로 데이터 집합을 구해 보통 같은 행의 데이터는 하나의 대상에 대한 곧통의 데이터를 가르키므로 해당 행의 위치를 구해 나머지도 구한다
+    codes = excel_handling().get_all_code(workbook)
+    while(loc<len(codes)):
+        if(codes[loc]==code):
+            break
+        else:
+            loc=loc+1
+    borrow_name=excel_handling().get_render_name(workbook, loc)    #Borrow Name
+    program_title=excel_handling().get_program_title(workbook)  #Program
+    property_control_no=excel_handling().get_property_control_no(workbook,loc) #Property Control No
+    court=excel_handling().get_court(workbook,loc)  #관할법원
+    case=excel_handling().get_case_number(workbook, loc)    #사건번호
+    borrower_num=excel_handling().get_render_index(workbook, loc)   #차주일련번호
+    opb=excel_handling().get_opb(workbook, borrower_num)    #OPB
+    interest=excel_handling().get_accured_interest(workbook, borrower_num)  #연체이자
+    setup_price=excel_handling().get_cpma(workbook, loc) #설정액
+    address=excel_handling().get_address(workbook, loc, code)    #Address
+    category=excel_handling().get_property_category(workbook, loc)  #Property category
+    ho=excel_handling().get_ho(workbook, code)
+    liensize_improvement=excel_handling().get_liensize_improvement(workbook, code)
+    landsize=excel_handling().get_landsize(workbook, code)
+    utensil=excel_handling().get_utensil(workbook, loc)
 
+    return render(request, 'estimation/normal_report.html',
+                  {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
+                   'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'ho':ho,
+                   'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil})

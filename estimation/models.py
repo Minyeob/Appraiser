@@ -10,3 +10,4 @@ class Bookmark(models.Model):
 
 class Document(models.Model):
     file = models.FileField(upload_to='documents')
+    title = models.CharField(max_length=100, null=False)

@@ -12,7 +12,7 @@
         {% if documents %}
             <ul>
             {% for document in documents %}
-                <li><a href="{{ document.file.url }}">{{ document.file.name }}</a></li>
+                <li><a href="{{ document.file.url }}">{{ document.title }}</a></li>
             {% endfor %}
             </ul>
         {% else %}
