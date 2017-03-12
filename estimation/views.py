@@ -10,6 +10,8 @@ from django.template import RequestContext
 from .functiom import *
 import xlrd
 from django import shortcuts
+from django.core.files import File
+import os
 
 
 # Create your views here.
@@ -68,12 +70,15 @@ def show_normal_report(request, code):
     setup_price=excel_handling().get_cpma(workbook, loc) #설정액
     address=excel_handling().get_address(workbook, loc, code)    #Address
     category=excel_handling().get_property_category(workbook, loc)  #Property category
-    ho=excel_handling().get_ho(workbook, code)
-    liensize_improvement=excel_handling().get_liensize_improvement(workbook, code)
-    landsize=excel_handling().get_landsize(workbook, code)
-    utensil=excel_handling().get_utensil(workbook, loc)
+    ho=excel_handling().get_ho(workbook, code)  #건물의 호들
+    liensize_improvement=excel_handling().get_liensize_improvement(workbook, code)  #전유면적 - 일단 엑셀에서 건물면적을 꺼내서 구함
+    landsize=excel_handling().get_landsize(workbook, code)  #대지권 면적
+    utensil=excel_handling().get_utensil(workbook, loc) #기계기구의 숫자
+
+    address_code=excel_handling().get_address_code(workbook,loc)
+
 
     return render(request, 'estimation/normal_report.html',
                   {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
                    'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'ho':ho,
-                   'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil})
+                   'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil, 'address_code':address_code})

@@ -2,33 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35dad2ea-d3e3-44e7-9b01-da782b1574fa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IntelliLang.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/colors.scheme.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/debugger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/editor.codeinsight.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/filetypes.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/github_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web-browsers.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Appraiser.iml" afterPath="$PROJECT_DIR$/.idea/Appraiser.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/code_address.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/estimation/function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_2Vo19Dz.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_3f4ZhVY.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_BvowJWw.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_INyOJjP.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_Tsxfn1T.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_XfSMtVw.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_czIH78n.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_n4jP4X4.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_scLiVEs.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_sjoHxgi.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_t71NF1E.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/documents/ibk_zh7hwbK.xlsx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Appraiser/settings.py" afterPath="$PROJECT_DIR$/Appraiser/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Appraiser/urls.py" afterPath="$PROJECT_DIR$/Appraiser/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/admin.py" afterPath="$PROJECT_DIR$/estimation/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/forms.py" afterPath="$PROJECT_DIR$/estimation/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/functiom.py" afterPath="$PROJECT_DIR$/estimation/functiom.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/estimation/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/migrations/0002_document.py" afterPath="$PROJECT_DIR$/estimation/migrations/0002_document.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/models.py" afterPath="$PROJECT_DIR$/estimation/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/templates/estimation/bookmark_list.html" afterPath="$PROJECT_DIR$/estimation/templates/estimation/bookmark_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/templates/estimation/code_selection.html" afterPath="$PROJECT_DIR$/estimation/templates/estimation/code_selection.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/templates/estimation/normal_report.html" afterPath="$PROJECT_DIR$/estimation/templates/estimation/normal_report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/templates/estimation/upload_file.html" afterPath="$PROJECT_DIR$/estimation/templates/estimation/upload_file.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/urls.py" afterPath="$PROJECT_DIR$/estimation/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estimation/views.py" afterPath="$PROJECT_DIR$/estimation/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index" afterPath="$PROJECT_DIR$/index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="Appraiser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,8 +46,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2800">
-              <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -65,7 +56,7 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estimation/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="100">
               <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -74,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functiom.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functiom.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estimation/functiom.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="242" column="59" lean-forward="true" selection-start-line="242" selection-start-column="59" selection-end-line="242" selection-end-column="59" />
+            <state relative-caret-position="348">
+              <caret line="293" column="30" lean-forward="false" selection-start-line="293" selection-start-column="30" selection-end-line="293" selection-end-column="30" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -89,8 +80,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estimation/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1375">
-              <caret line="63" column="65" lean-forward="false" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
+            <state relative-caret-position="423">
+              <caret line="83" column="131" lean-forward="false" selection-start-line="83" selection-start-column="131" selection-end-line="83" selection-end-column="131" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -98,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="normal_report.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="normal_report.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/normal_report.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state relative-caret-position="275">
+              <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -121,8 +112,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estimation/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            <state relative-caret-position="200">
+              <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -135,26 +126,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
               <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload_file.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/upload_file.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/estimation/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -178,6 +149,8 @@
       <find>self</find>
       <find>borrower</find>
       <find>pool</find>
+      <find>postcode</find>
+      <find>역삼동</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,15 +163,15 @@
         <option value="$PROJECT_DIR$/Appraiser/urls.py" />
         <option value="$PROJECT_DIR$/estimation/templates/estimation/check.html" />
         <option value="$PROJECT_DIR$/estimation/forms.py" />
-        <option value="$PROJECT_DIR$/Appraiser/settings.py" />
         <option value="$PROJECT_DIR$/estimation/urls.py" />
         <option value="$PROJECT_DIR$/estimation/admin.py" />
         <option value="$PROJECT_DIR$/estimation/models.py" />
         <option value="$PROJECT_DIR$/estimation/templates/estimation/upload_file.html" />
         <option value="$PROJECT_DIR$/estimation/templates/estimation/code_selection.html" />
+        <option value="$PROJECT_DIR$/Appraiser/settings.py" />
         <option value="$PROJECT_DIR$/estimation/views.py" />
-        <option value="$PROJECT_DIR$/estimation/templates/estimation/normal_report.html" />
         <option value="$PROJECT_DIR$/estimation/functiom.py" />
+        <option value="$PROJECT_DIR$/estimation/templates/estimation/normal_report.html" />
       </list>
     </option>
   </component>
@@ -243,6 +216,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -308,6 +295,11 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Appraiser\media" />
+    </key>
   </component>
   <component name="RunManager" selected="Django server.Appraiser">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -653,31 +645,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3050">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Appraiser/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="21" column="71" lean-forward="false" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/estimation/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -887,18 +854,42 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/check.html" />
-    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
+    <entry file="file://$PROJECT_DIR$/estimation/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
-          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state relative-caret-position="125">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/estimation/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/upload_file.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estimation/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -911,35 +902,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/estimation/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="200">
+          <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/upload_file.html">
+    <entry file="file://$PROJECT_DIR$/media/code_address.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        <state relative-caret-position="125">
+          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/estimation/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="100">
           <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -947,31 +930,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/normal_report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/estimation/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="63" column="65" lean-forward="false" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
+        <state relative-caret-position="423">
+          <caret line="83" column="131" lean-forward="false" selection-start-line="83" selection-start-column="131" selection-end-line="83" selection-end-column="131" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/estimation/functiom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="242" column="59" lean-forward="true" selection-start-line="242" selection-start-column="59" selection-end-line="242" selection-end-column="59" />
+        <state relative-caret-position="348">
+          <caret line="293" column="30" lean-forward="false" selection-start-line="293" selection-start-column="30" selection-end-line="293" selection-end-column="30" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/normal_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
