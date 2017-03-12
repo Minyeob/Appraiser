@@ -190,8 +190,7 @@ class excel_handling:
             district = worksheet.cell_value(row_num, 19)
             addtdistrict = worksheet.cell_value(row_num, 20)
             if(len(ho)>1):
-                remain=addtdistrict.split(',')
-                addtdistrict=remain[0]+'외'
+                addtdistrict=addtdistrict+'외'
 
             full_address=province+' '+city+' '+district+' '+addtdistrict
             address.append(full_address)
@@ -265,3 +264,35 @@ class excel_handling:
 
         utensil = numbers[loc]
         return utensil
+
+    def get_address_code(self, workbook, loc):
+        worksheet=workbook.sheet_by_index(2)
+        num_rows = worksheet.nrows
+        addresses=[]
+        for row_num in range(13, num_rows):
+            province = worksheet.cell_value(row_num, 17)
+            city = worksheet.cell_value(row_num, 18)
+            district = worksheet.cell_value(row_num, 19)
+            full_address = province + ' ' + city + ' ' + district
+            addresses.append(full_address)
+
+        address=addresses[loc]
+        print(address)
+
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+        file_path = os.path.join(MEDIA_ROOT, 'address_code.xlsx')
+        code_workbook=xlrd.open_workbook(file_path)
+        code_worksheet=code_workbook.sheet_by_index(0)
+        num_rows = code_worksheet.nrows
+        print(num_rows)
+
+        codes=[]
+        for row_num in range(1,num_rows):
+            code=code_worksheet.cell_value(row_num,0)
+            goal=code_worksheet.cell_value(row_num,1)
+            codes.append(goal)
+            if(goal==address):
+                return int(code)
+
+        return codes
