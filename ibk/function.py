@@ -284,7 +284,6 @@ class excel_handling:
             addresses.append(full_address)
 
         address=addresses[loc]
-        print(address)
 
         #법정동코드 엑셀파일을 연다
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

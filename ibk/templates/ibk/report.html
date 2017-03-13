@@ -1,0 +1,774 @@
+<title>Atools</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<body>
+<div style="float:left;">
+<th>결과요약</th>
+<table border="1">
+
+<tr align="center">
+    <td>Program</td>
+    <td>{{ program }}</td>
+    <td>OPB</td>
+    <td>{{ opb }}</td>
+    <td rowspan="5">법사가 대비</td>
+    <td rowspan="5">시장가 대비</td>
+    <td rowspan="5">OPB 대비</td>
+</tr>
+
+<tr align="center">
+    <td>담당자</td>
+    <td>&nbsp;</td>
+    <td>연체이자</td>
+    <td>&nbsp;</td>
+</tr>
+<tr align="center">
+    <td>담당자 연락처</td>
+    <td>&nbsp;</td>
+    <td>총 채권액</td>
+    <td>&nbsp;</td>
+</tr>
+<tr align="center">
+    <td>Property Control NO.</td>
+    <td>&nbsp;</td>
+    <td>설정액</td>
+    <td>&nbsp;</td>
+</tr>
+<tr align="center">
+    <td>Borrow Name</td>
+    <td>&nbsp;</td>
+    <td>법사가</td>
+    <td>&nbsp;</td>
+</tr>
+<tr align="center">
+    <td>시장전망</td>
+    <td>&nbsp;</td>
+    <td>시장가</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+<tr align="center">
+    <td>관할법원</td>
+    <td>&nbsp;</td>
+    <td>낙찰가</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+<tr align="center">
+    <td>사건번호</td>
+    <td>&nbsp;</td>
+    <td>평균낙찰가</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+<tr align="center">
+    <td>법원제출일</td>
+    <td>&nbsp;</td>
+    <td>차기기일</td>
+    <td>&nbsp;</td>
+    <td >유찰회수</td>
+    <td colspan="2">&nbsp;</td>
+</tr>
+</table>
+</div>
+
+
+
+<div style="float:left;padding-left:25px;">
+<th>본건현황</th>
+<table align="center"  border="1">
+
+<tr align="center">
+    <td colspan="7">Address</td>
+    <td colspan="2">Property Category</td>
+</tr>
+<tr align="center">
+    <td colspan="7">&nbsp;</td>
+    <td colspan="2">&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td colspan="9">토지</td>
+ </tr>
+
+<tr align="center">
+    <td>용도지역</td>
+    <td>지목</td>
+    <td>이용상황</td>
+    <td colspan="2">개별공시지가</td>
+    <td colspan="2">전체 토지 면적</td>
+    <td colspan="2">담보(대지권)면적</td>
+</tr>
+
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td colspan="9">건물</td>
+ </tr>
+
+ <tr align="center">
+    <td>건물구조</td>
+    <td>사용승인일</td>
+    <td>층별 용도</td>
+    <td colspan="2">전용율</td>
+    <td colspan="2">담보면적(전유)</td>
+    <td colspan="2">담보면적(계약)</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+
+
+<div style="position: absolute;bottom: 400px;">
+<th>1.건물</th>
+<table border="1">
+
+<tr align="center">
+    <td rowspan="2">기호</td>
+    <td rowspan="2">호</td>
+    <td colspan="7">면적</td>
+    <td colspan="4">Auction value(A)</td>
+    <td colspan="4">Market value(M)</td>
+    <td colspan="5">Estimated Value(E)</td>
+</tr>
+
+<tr align="center">
+    <td>전유(m2)</td>
+    <td>전유(py)</td>
+    <td>계약(m2)</td>
+    <td>계약(py)</td>
+    <td>대지권(m2)</td>
+    <td>대지권(py)</td>
+    <td>전용율</td>
+    <td>금액(원)</td>
+    <td>전유단가(py)</td>
+    <td>계약단가(py)</td>
+    <td>가구비</td>
+    <td>금액원(원)</td>
+    <td>전유단가(py)</td>
+    <td>계약단가(py)</td>
+    <td>M/A</td>
+    <td>금액원(원)</td>
+    <td>전유단가(py)</td>
+    <td>계약단가(py)</td>
+    <td>E/A</td>
+    <td>E/M</td>
+</tr>
+
+<tr align="center">
+    <td>가</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>나</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>다</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>라</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>마</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>소계</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+
+
+<div style="position: absolute;bottom: 200px;">
+<th>2.제시외건물,기계기구</th>
+<table border="1">
+
+ <tr align="center">
+    <td rowspan="2">기호</td>
+    <td rowspan="2">구분</td>
+    <td rowspan="2">호</td>
+    <td rowspan="2">구조/명칭</td>
+    <td rowspan="2">용도/취득일자</td>
+    <td colspan="2">면적 or 수량</td>
+    <td colspan="4">Auction Value(A)</td>
+    <td colspan="4">Market Value(M)</td>
+    <td colspan="5">Estimated Value(E)</td>
+</tr>
+    
+<tr align="center">
+    <td>m2</td>
+    <td>py</td>
+    <td>금액(원)</td>
+    <td>단가(m2)</td>
+    <td>단가(py)</td>
+    <td>가구비</td>
+    <td>금액(원)</td>
+    <td>단가(m2)</td>
+    <td>단가(py)</td>
+    <td>M/A</td>
+    <td>금액(원)</td>
+    <td>단가(m2)</td>
+    <td>단가(py)</td>
+    <td>E/A</td>
+    <td>E/M</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td colspan="7">소계</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<div style="position: absolute;bottom: 100px;">
+<th>3.합계</th>
+<table border="1">
+
+<tr align="center">
+    <td colspan="7">평가총액</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<div style="position: absolute;bottom: -250px;">
+<th>인근거래사례 및 낙찰사례</th>
+<table border="1">
+
+<tr align="center">
+    <td rowspan="2">구분</td>
+    <td>소재지</td>
+    <td>층</td>
+    <td>구조</td>
+    <td>사용승인일</td>
+    <td>유찰회수</td>
+    <td>기준시점</td>
+    <td>전유면적(m2)</td>
+    <td>계약면적(m2)</td>
+    <td>대지권(m2)</td>
+    <td colspan="3">법사가</td>
+    <td colspan="3">거래가 or 낙찰가</td>
+    <td>차순위 낙찰가</td>
+    <td>전용율</td>
+</tr>
+
+<tr align="center">
+    <td>지번</td>
+    <td>호</td>
+    <td>용도</td>
+    <td>산건번호</td>
+    <td>입찰자수</td>
+    <td>거래일(낙찰일)</td>
+    <td>전유면적(py)</td>
+    <td>계약면적(py)</td>
+    <td>대지권(py)</td>
+    <td>금액(원)</td>
+    <td>전유단가(py)</td>
+    <td>계약단가(py)</td>
+    <td>금액(원)</td>
+    <td>전유단가(py)</td>
+    <td>계약단가(py)</td>
+    <td>낙찰자</td>
+    <td>낙찰가율</td>
+</tr>
+
+<tr align="center">
+    <td rowspan="2">거래</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td rowspan="2">거래</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td rowspan="2">낙찰</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td rowspan="2">낙찰</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+</table>
+</div>
+
+<div style="float: left;position: absolute;bottom: -450px;">
+<th>본건 거래사례, 낙찰사례, 유찰사례, 평가전례</th>
+<table border="1">
+
+<tr align="center">
+    <td>구분</td>
+    <td>기준시점</td>
+    <td>매도인</td>
+    <td>매수인(낙찰자)</td>
+    <td>금액</td>
+    <td>계약단가(py)</td>
+    <td>비고(사건번호)</td>
+</tr>
+
+<tr align="center">
+    <td>거래</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>경매</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>유찰</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<div style="position: absolute;bottom: -650px; margin-bottom: 50px;">
+<th>낙찰가율 통계</th>
+<table border="1">
+
+<tr align="center">
+    <td>분류</td>
+    <td>지역</td>
+    <td>낙찰가율(1년)</td>
+    <td>낙찰건수</td>
+    <td>낙찰가율(6월)</td>
+    <td>낙찰건수</td>
+    <td>낙찰가율(3월)</td>
+    <td>낙찰건수</td>
+</tr>
+
+<tr align="center">
+    <td rowspan="3">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<div style="position:absolute;right: 950px;bottom:-450px;">
+<th>종합의견</th>
+<table align="center"  border="1">
+
+<tr align="center">
+    <td>법사가 분석</td>
+    <td colspan="3">&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>시장전망</td>
+    <td colspan="3">&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>가격 수준</td>
+    <td>&nbsp;</td>
+    <td>임대수준</td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr align="center">
+    <td>가격결정의견</td>
+    <td colspan="3">&nbsp;</td>
+ </tr>
+
+
+</table>
+</div>
+</body>

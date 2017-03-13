@@ -1,23 +1,16 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect
 from django.views.generic import *
-from estimation.models import Bookmark
 #  파일을 import 할 때 from 에서 .을 이용하면 파일경로를 전부 칠 필요없이 현재 파일이 속한 파일의 다른 파일들을 가져올 수 있다
 from .forms import UploadFileForm
 from .models import Document
 from django.core.urlresolvers import reverse_lazy
 from django.template import RequestContext
-from .functiom import *
+from .function import *
 import xlrd
 from django import shortcuts
 from django.core.files import File
 import os
-
-
-# Create your views here.
-
-class Bookmark_ListView(ListView):
-    model = Bookmark
 
 #get으로 해당 페이지에 접속하면 파일을 업로드할 수 있는 폼을 제공, 파일을 업로드해서 업로드버튼을 누르면 해당 파일에 있는 데이터로 각 사건에 대해 보기를 제공
 def upload_file(request):
@@ -37,14 +30,14 @@ def upload_file(request):
             if(len(file)==0):
                 new_document.save()
 
-            return render(request,'estimation/code_selection.html', {'normals':normals, 'file':new_document})
+            return render(request,'ibk/code_selection.html', {'normals':normals, 'file':new_document})
 
     else:
         form=UploadFileForm()
     documents = Document.objects.all()
 
 
-    return render(request,'estimation/upload_file.html',{'documents':documents, 'form':form})
+    return render(request,'ibk/upload_file.html',{'documents':documents, 'form':form})
 
 #탁감 보고서를 작성하기 위해 엑셀데이터에서 필요한 데이터를 추출해서 html 페이지로 데이터를 보내준다
 def show_normal_report(request, code):
@@ -78,7 +71,7 @@ def show_normal_report(request, code):
     address_code=excel_handling().get_address_code(workbook,loc)
 
 
-    return render(request, 'estimation/report.html',
+    return render(request, 'ibk/index.html',
                   {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
                    'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'ho':ho,
                    'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil, 'address_code':address_code})

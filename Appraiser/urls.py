@@ -19,5 +19,6 @@ from estimation.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^estimation/',include('estimation.urls', namespace='estimation'))
+    url(r'^estimation/',include('estimation.urls', namespace='estimation')),
+    url(r'^ibk/', include('ibk.urls', namespace='ibk'))
 ]
