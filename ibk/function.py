@@ -1,6 +1,7 @@
 import xlrd
 from .models import Document
 import os
+import xlutils.copy
 
 class excel_handling:
     #엑셀파일을 업로드하면 해당 엑셀파일을 읽어 파이썬내에서 처리할 수 있는 형태로 만드는 함수
@@ -301,3 +302,48 @@ class excel_handling:
                 return int(code)
 
         return None
+
+class excel_write:
+    def getOutCell(self, outSheet, colIndex, rowIndex):
+        """ HACK: Extract the internal xlwt cell representation. """
+        row = outSheet._Worksheet__rows.get(rowIndex)
+        if not row: return None
+
+        cell = row._Row__cells.get(colIndex)
+        return cell
+
+    def setOutCell(self, outSheet, col, row, value):
+        """ Change cell value without changing formatting. """
+        # HACK to retain cell style.
+        previousCell = self.getOutCell(outSheet, col, row)
+        # END HACK, PART I
+
+        outSheet.write(row, col, value)
+
+        # HACK, PART II
+        if previousCell:
+            newCell = self.getOutCell(outSheet, col, row)
+            if newCell:
+                newCell.xf_idx = previousCell.xf_idx
+        # END HACK
+
+    def save_file(self, program, opb, property_no, interest, setup_price):
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+        file_path = os.path.join(MEDIA_ROOT, 'sample.xls')
+        inbook = xlrd.open_workbook(file_path, formatting_info=True)
+        outbook = xlutils.copy.copy(inbook)
+        outsheet=outbook.get_sheet(0)
+        self.setOutCell(outsheet, 11, 3, program)
+        self.setOutCell(outsheet, 32, 3, opb)
+        self.setOutCell(outsheet, 32, 4, interest)
+        self.setOutCell(outsheet, 11, 6, property_no)
+        self.setOutCell(outsheet, 32, 6, setup_price)
+
+        outbook.save('output.xls')
+        new_document = Document(file=os.path.join(BASE_DIR, 'output.xls'))
+        new_document.title = 'output.xls'
+        file = Document.objects.filter(title=new_document.title)
+        if (len(file) == 0):
+            new_document.save()
+        return os.path.join(MEDIA_ROOT, 'output.xls')

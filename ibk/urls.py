@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^$', upload_file, name='upload'),
     # ?p<parameter 이름>파라미터 값 형태로 url을 통해 파라미터를 넘길 수 있다
     url(r'^page/(?P<code>R(\d+)-(\d+))/', show_normal_report, name='page'),
+    url(r'download/$', download, name='download'),
 ]
