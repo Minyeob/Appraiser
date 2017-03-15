@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render,redirect
 from django.views.generic import *
 #  파일을 import 할 때 from 에서 .을 이용하면 파일경로를 전부 칠 필요없이 현재 파일이 속한 파일의 다른 파일들을 가져올 수 있다
@@ -11,6 +11,8 @@ import xlrd
 from django import shortcuts
 from django.core.files import File
 import os
+import urllib.request
+import xmltodict
 
 #get으로 해당 페이지에 접속하면 파일을 업로드할 수 있는 폼을 제공, 파일을 업로드해서 업로드버튼을 누르면 해당 파일에 있는 데이터로 각 사건에 대해 보기를 제공
 def upload_file(request):
@@ -70,8 +72,20 @@ def show_normal_report(request, code):
 
     address_code=excel_handling().get_address_code(workbook,loc)
 
+    #url = 'http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcSHRent?LAWD_CD=11110&DEAL_YMD=201702&serviceKey=KqP4dQTZbN2QbXZlZUK0gYsfRfqiACwnmgqPf3N2yPqj%2F7Ura0eDpY1CKVPmzzQRqGS3myGv3Oauhw7YmfPDLg%3D%3D'
+    #data = urllib.request.urlopen(url).read()
+    #sample=xmltodict.parse(data)['response']['body']['items']['item'][1]['계약면적']
+
+    download_url=excel_write().save_file(program_title, opb, property_control_no, interest, setup_price)
 
     return render(request, 'ibk/index.html',
                   {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
                    'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'ho':ho,
-                   'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil, 'address_code':address_code})
+                   'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil, 'address_code':address_code, 'download_url':download_url})
+
+def download(request):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    url=os.path.join(BASE_DIR, 'output.xls')
+    file = Document.objects.filter(title='output.xls')
+    return HttpResponse(url, content_type='application/vnd.ms-excel')
