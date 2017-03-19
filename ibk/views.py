@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render,redirect
 from django.views.generic import *
 #  파일을 import 할 때 from 에서 .을 이용하면 파일경로를 전부 칠 필요없이 현재 파일이 속한 파일의 다른 파일들을 가져올 수 있다
-from .forms import UploadFileForm
+from .forms import UploadFileForm, ExcelForm
 from .models import Document
 from django.core.urlresolvers import reverse_lazy
 from django.template import RequestContext
@@ -68,6 +68,7 @@ def show_normal_report(request, code):
     ho=excel_handling().get_ho(workbook, code)  #건물의 호들
     liensize_improvement=excel_handling().get_liensize_improvement(workbook, code)  #전유면적 - 일단 엑셀에서 건물면적을 꺼내서 구함
     landsize=excel_handling().get_landsize(workbook, code)  #대지권 면적
+    building=zip(ho, liensize_improvement, landsize)
     utensil=excel_handling().get_utensil(workbook, loc) #기계기구의 숫자
 
     address_code=excel_handling().get_address_code(workbook,loc)
@@ -76,16 +77,35 @@ def show_normal_report(request, code):
     #data = urllib.request.urlopen(url).read()
     #sample=xmltodict.parse(data)['response']['body']['items']['item'][1]['계약면적']
 
-    download_url=excel_write().save_file(program_title, opb, property_control_no, interest, setup_price)
+    #download_url=excel_write().save_file(program_title, opb, property_control_no, interest, setup_price)
 
-    return render(request, 'ibk/index.html',
+    return render(request, 'ibk/report.html',
                   {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
-                   'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'ho':ho,
-                   'liensize_improvement':liensize_improvement, 'landsize':landsize, 'utensil':utensil, 'address_code':address_code, 'download_url':download_url})
+                   'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'building':building, 'utensil':utensil,
+                   'address_code':address_code})
 
 def download(request):
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    url=os.path.join(BASE_DIR, 'output.xls')
-    file = Document.objects.filter(title='output.xls')
-    return HttpResponse(url, content_type='application/vnd.ms-excel')
+    if request.method == 'POST':
+        form = ExcelForm(request.POST)
+        #form은 valid 검사를 하고 나서야 cleaned_data를 가진다
+        if form.is_valid():
+            program=form.cleaned_data['program']
+            opb=form.cleaned_data['opb']
+            interest=form.cleaned_data['interest']
+            property_control_no=form.cleaned_data['property_control_no']
+            setup_price=form.cleaned_data['setup_price']
+            user=form.cleaned_data['user']
+            ho=request.POST.getlist('ho[]')
+            submission_date=form.cleaned_data['submission_date']
+
+            excel_write().save_file(program, opb, property_control_no, interest, setup_price, submission_date)
+
+            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+            file_path=os.path.join(BASE_DIR, 'ibk_output.xls')
+            fh=open(file_path, 'rb')
+            response=HttpResponse(fh.read(), content_type='application/vnd.ms-excel')
+            # 파일이름은 한글로 되어있으면 다운로드를 제공할때 올바르게 제공되지 않는다 - 이유확인해보기
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            print(os.path.basename(file_path))
+            return response
