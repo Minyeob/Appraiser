@@ -29,6 +29,12 @@
     <h4>법정동코드 {{ address_code }}</h4>
     <h4>데이터 : {{ data }}</h4>
     <input type="text" id="bcode">
+    {% if building %}
+        <h3>building</h3>
+        {% for a,b,c in building %}
+            {{ a }}{{ b }}{{ c }}
+        {% endfor %}
+    {% endif %}
 
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>
 <script>

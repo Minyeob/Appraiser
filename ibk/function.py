@@ -246,10 +246,11 @@ class excel_handling:
             number=worksheet.cell_value(row_num,8)
             liensize_land=worksheet.cell_value(row_num, 15)
             land_ratio=worksheet.cell_value(row_num, 17)
+            value=0
             if (number == code):
                 if(land_ratio):
-                    result.append(liensize_land*land_ratio)
-
+                    value=liensize_land*land_ratio
+            result.append(value)
         return result
 
     #기계들의 개수가 얼마나 되는지 return 해주는 함수
@@ -327,10 +328,10 @@ class excel_write:
                 newCell.xf_idx = previousCell.xf_idx
         # END HACK
 
-    def save_file(self, program, opb, property_no, interest, setup_price):
+    def save_file(self, program, opb, property_no, interest, setup_price, submission_date):
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-        file_path = os.path.join(MEDIA_ROOT, 'sample.xls')
+        file_path = os.path.join(MEDIA_ROOT, 'output_sample.xls')
         inbook = xlrd.open_workbook(file_path, formatting_info=True)
         outbook = xlutils.copy.copy(inbook)
         outsheet=outbook.get_sheet(0)
@@ -339,11 +340,12 @@ class excel_write:
         self.setOutCell(outsheet, 32, 4, interest)
         self.setOutCell(outsheet, 11, 6, property_no)
         self.setOutCell(outsheet, 32, 6, setup_price)
+        self.setOutCell(outsheet, 11, 11, submission_date)
 
-        outbook.save('output.xls')
-        new_document = Document(file=os.path.join(BASE_DIR, 'output.xls'))
-        new_document.title = 'output.xls'
-        file = Document.objects.filter(title=new_document.title)
-        if (len(file) == 0):
-            new_document.save()
-        return os.path.join(MEDIA_ROOT, 'output.xls')
+        outbook.save('ibk_output.xls')
+        #new_document = Document(file=os.path.join(BASE_DIR, 'output.xls'))
+        #new_document.title = 'ibk_output.xls'
+        #file = Document.objects.filter(title=new_document.title)
+        #if (len(file) == 0):
+        #   new_document.save()
+        return os.path.join(BASE_DIR, 'ibk_output.xls')
