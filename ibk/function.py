@@ -2,6 +2,7 @@ import xlrd
 from .models import Document
 import os
 import xlutils.copy
+import re
 
 class excel_handling:
     #엑셀파일을 업로드하면 해당 엑셀파일을 읽어 파이썬내에서 처리할 수 있는 형태로 만드는 함수
@@ -218,9 +219,13 @@ class excel_handling:
         result=[]
         for row_num in range(8, num_rows):
             number=worksheet.cell_value(row_num,8)
-            ho=worksheet.cell_value(row_num, 13)
+            ho=str(worksheet.cell_value(row_num, 13))
+            arr=ho.split()
+            end=len(arr)
+
             if(number==code):
-                result.append(ho)
+                temp = int(re.findall('\d+', arr[end-1])[0])
+                result.append(temp)
 
         return result
 
@@ -328,19 +333,107 @@ class excel_write:
                 newCell.xf_idx = previousCell.xf_idx
         # END HACK
 
-    def save_file(self, program, opb, property_no, interest, setup_price, submission_date):
+    def set_new_cell(self, outSheet, precol, prerow, col, row, value):
+        previousCell = self.getOutCell(outSheet, precol, prerow)
+        outSheet.write(row, col, value)
+
+        if previousCell:
+            newCell = self.getOutCell(outSheet, col, row)
+            if newCell:
+                newCell.xf_idx = previousCell.xf_idx
+
+
+    def save_file(self, user_input):
+        print(user_input)
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
         file_path = os.path.join(MEDIA_ROOT, 'output_sample.xls')
         inbook = xlrd.open_workbook(file_path, formatting_info=True)
         outbook = xlutils.copy.copy(inbook)
         outsheet=outbook.get_sheet(0)
-        self.setOutCell(outsheet, 11, 3, program)
-        self.setOutCell(outsheet, 32, 3, opb)
-        self.setOutCell(outsheet, 32, 4, interest)
-        self.setOutCell(outsheet, 11, 6, property_no)
-        self.setOutCell(outsheet, 32, 6, setup_price)
-        self.setOutCell(outsheet, 11, 11, submission_date)
+
+        #결과요약
+        self.setOutCell(outsheet, 11, 3, user_input['program'])
+        self.setOutCell(outsheet, 32, 3, user_input['opb'])
+        self.setOutCell(outsheet, 11, 4, user_input['user'])
+        self.setOutCell(outsheet, 32, 4, user_input['interest'])
+        self.setOutCell(outsheet, 11, 5, user_input['user_phone'])
+        self.setOutCell(outsheet, 32, 5, user_input['credit_amount'])
+        self.setOutCell(outsheet, 11, 6, user_input['property_control_no'])
+        self.setOutCell(outsheet, 32, 6, user_input['setup_price'])
+        self.setOutCell(outsheet, 11, 7, user_input['borrow_name'])
+        self.setOutCell(outsheet, 32, 7, user_input['law_price'])
+        self.setOutCell(outsheet, 11, 8, user_input['market_predict'])
+        self.setOutCell(outsheet, 32, 8, user_input['market_price'])
+        self.setOutCell(outsheet, 11, 9, user_input['court'])
+        self.setOutCell(outsheet, 32, 9, user_input['bid'])
+        self.setOutCell(outsheet, 11, 10, user_input['case'])
+        self.setOutCell(outsheet, 32, 10, user_input['avg_bid'])
+        self.setOutCell(outsheet, 11, 11, user_input['submission_date'])
+        self.setOutCell(outsheet, 32, 11, user_input['next_date'])
+
+        self.setOutCell(outsheet, 40, 8, user_input['law_price_comp1'])
+        self.setOutCell(outsheet, 44, 8, user_input['market_price_comp1'])
+        self.setOutCell(outsheet, 48, 8, user_input['opb_comp1'])
+        self.setOutCell(outsheet, 40, 9, user_input['law_price_comp2'])
+        self.setOutCell(outsheet, 44, 9, user_input['market_price_comp2'])
+        self.setOutCell(outsheet, 48, 9, user_input['opb_comp2'])
+        self.setOutCell(outsheet, 40, 10, user_input['law_price_comp3'])
+        self.setOutCell(outsheet, 44, 10, user_input['market_price_comp3'])
+        self.setOutCell(outsheet, 48, 10, user_input['opb_comp3'])
+        self.setOutCell(outsheet, 46, 11, user_input['fail_count'])
+
+        #본건현황
+        self.setOutCell(outsheet, 55, 4, user_input['address'])
+        self.setOutCell(outsheet, 91, 4, user_input['property_category'])
+        self.setOutCell(outsheet, 55, 7, user_input['usage'])
+        self.setOutCell(outsheet, 60, 7, user_input['land_category'])
+        self.setOutCell(outsheet, 64, 7, user_input['state'])
+        self.setOutCell(outsheet, 69, 7, user_input['land_price_m'])
+        self.setOutCell(outsheet, 75, 7, user_input['land_price_py'])
+        self.setOutCell(outsheet, 82, 7, user_input['land_size_m'])
+        self.setOutCell(outsheet, 88, 7, user_input['land_size_py'])
+        self.setOutCell(outsheet, 94, 7, user_input['security_size_m'])
+        self.setOutCell(outsheet, 100, 7, user_input['security_size_py'])
+
+        self.setOutCell(outsheet, 55, 10, user_input['structure'])
+        self.setOutCell(outsheet, 62, 10, user_input['permission_date'])
+        self.setOutCell(outsheet, 69, 10, user_input['floor_usage'])
+        self.setOutCell(outsheet, 78, 10, user_input['exclusive_rate'])
+        self.setOutCell(outsheet, 82, 10, user_input['exclusive_area_m'])
+        self.setOutCell(outsheet, 88, 10, user_input['exclusive_area_py'])
+        self.setOutCell(outsheet, 94, 10, user_input['contract_area_m'])
+        self.setOutCell(outsheet, 100, 10, user_input['contract_area_py'])
+
+        #건물
+        building_count=len(user_input['building_ho'])
+        height=16
+        for index in range(0,building_count):
+            print(user_input['building_label'][index])
+            self.set_new_cell(outsheet, 2, 16, 2, height+index, user_input['building_label'][index])
+            self.set_new_cell(outsheet, 5, 16, 5, height + index, user_input['building_ho'][index])
+            self.set_new_cell(outsheet, 9, 16, 9, height + index, round(float(user_input['building_exclusive_m'][index]),2))
+            self.set_new_cell(outsheet, 13, 16, 13, height + index, round(float(user_input['building_exclusive_py'][index]), 2))
+            self.set_new_cell(outsheet, 17, 16, 17, height + index, round(float(user_input['building_contract_m'][index]), 2))
+            self.set_new_cell(outsheet, 21, 16, 21, height + index, round(float(user_input['building_contract_py'][index]), 2))
+            self.set_new_cell(outsheet, 25, 16, 25, height + index, round(float(user_input['building_right_m'][index]), 2))
+            self.set_new_cell(outsheet, 29, 16, 29, height + index, round(float(user_input['building_right_py'][index]), 2))
+            self.set_new_cell(outsheet, 33, 16, 33, height+index, user_input['building_ratio'][index])
+            self.set_new_cell(outsheet, 37, 16, 37, height + index, user_input['building_auction_price'][index])
+            self.set_new_cell(outsheet, 44, 16, 44, height + index, user_input['building_auction_exclusive'][index])
+            self.set_new_cell(outsheet, 50, 16, 50, height + index, user_input['building_auction_contract'][index])
+            self.set_new_cell(outsheet, 56, 16, 56, height + index, user_input['building_auction_ratio'][index])
+            self.set_new_cell(outsheet, 59, 16, 59, height + index, user_input['building_market_price'][index])
+            self.set_new_cell(outsheet, 66, 16, 66, height + index, user_input['building_market_exclusive'][index])
+            self.set_new_cell(outsheet, 72, 16, 72, height + index, user_input['building_market_contract'][index])
+            self.set_new_cell(outsheet, 78, 16, 78, height + index, user_input['building_market_ma'][index])
+            self.set_new_cell(outsheet, 81, 16, 81, height + index, user_input['building_estimated_price'][index])
+            self.set_new_cell(outsheet, 88, 16, 88, height + index, user_input['building_estimated_exclusive'][index])
+            self.set_new_cell(outsheet, 94, 16, 94, height + index, user_input['building_estimated_contract'][index])
+            self.set_new_cell(outsheet, 100, 16, 100, height + index, user_input['building_estimated_ea'][index])
+            self.set_new_cell(outsheet, 103, 16, 103, height + index, user_input['building_estimated_em'][index])
+
+        #self.setOutCell(outsheet, 5, 16, user_input['building_ho[]'])
 
         outbook.save('ibk_output.xls')
         #new_document = Document(file=os.path.join(BASE_DIR, 'output.xls'))
