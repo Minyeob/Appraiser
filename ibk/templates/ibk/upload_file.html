@@ -8,16 +8,6 @@
 
     <div class="panel-heading">
         <h3 class="panel-title">File Upload Form</h3>
-
-        {% if documents %}
-            <ul>
-            {% for document in documents %}
-                <li><a href="{{ document.file.url }}">{{ document.title }}</a></li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <p>No document</p>
-        {% endif %}
     </div>
 
     <div class="panel-body">

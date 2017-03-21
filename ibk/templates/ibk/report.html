@@ -113,7 +113,7 @@
 </tr>
 <tr align="center">
     <td>관할법원</td>
-    <td><input type="text" name="관할법원" value="{{court}}"></td>
+    <td><input type="text" name="court" value="{{court}}"></td>
     <td>낙찰가</td>
     <td><input type="text" size="10" name="bid"></td>
     <td><input type="text" size="10" name="law_price_comp2"></td>
@@ -148,8 +148,8 @@
     <td colspan="2">Property Category</td>
 </tr>
 <tr align="center">
-    <td colspan="7"><input type="text" name="Address" value="{{address}}"></td>
-    <td colspan="2"><input type="text" name="Property Category" value="{{category}}"></td>
+    <td colspan="7"><input type="text" name="address" value="{{address}}"></td>
+    <td colspan="2"><input type="text" name="property_category" value="{{category}}"></td>
 </tr>
 
 <tr align="center">
@@ -167,12 +167,15 @@
 
 
 <tr align="center">
-    <td><input type="text" size="10" name="usage" multiple></td>
-    <td><input type="text" size="10" name="usage" multiple></td>
-    <td><input type="text" size="10" name="usage" multiple></td>
-    <td><input type="text" size="10" name="개별공시지가(py)"></td>
-    <td><input type="text" size="10" name="전체 토지 면적(py)"></td>
-    <td><input type="text" size="10" name="담보(대지권)면적(py)"></td>
+    <td><input type="text" size="10" name="usage"></td>
+    <td><input type="text" size="10" name="land_category"></td>
+    <td><input type="text" size="10" name="state"></td>
+    <td><input type="text" size="10" name="land_price_m"></td>
+    <td><input type="text" size="10" name="land_price_py"></td>
+    <td><input type="text" size="10" name="land_size_m"></td>
+    <td><input type="text" size="10" name="land_size_py"></td>
+    <td><input type="text" size="10" name="security_size_m"></td>
+    <td><input type="text" size="10" name="security_size_py"></td>
 </tr>
 
 <tr align="center">
@@ -189,14 +192,14 @@
 </tr>
 
 <tr align="center">
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td colspan="2"><input type="text" size="10" name="전용율"></td>
-    <td><input type="text" size="10" name="담보면적(전유)"></td>
-    <td><input type="text" size="10" name="담보면적(전유)(py)"></td>
-    <td><input type="text" size="10" name="담보면적(계약)"></td>
-    <td><input type="text" size="10" name="담보면적(계약)(py)"></td>
+    <td><input type="text" size="10" name="structure"></td>
+    <td><input type="text" size="10" name="permission_date"></td>
+    <td><input type="text" size="10" name="floor_usage"></td>
+    <td colspan="2"><input type="text" size="10" name="exclusive_rate"></td>
+    <td><input type="text" size="10" name="exclusive_area_m"></td>
+    <td><input type="text" size="10" name="exclusive_area_py"></td>
+    <td><input type="text" size="10" name="contract_area_m"></td>
+    <td><input type="text" size="10" name="contract_area_py"></td>
 </tr>
 </table>
 </div>
@@ -237,30 +240,30 @@
     <td>E/M</td>
 </tr>
 
-{% for ho, liensize_improvement, landsize in building %}
+{% for label, ho, liensize_improvement, landsize in building %}
 <tr align="center">
-    <td>가</td>
-    <td><input type="text" name="ho[]" value="{{ho}}"></td>
-    <td><input type="text" name="exclusive_m[]" value="{{liensize_improvement}}"></td>
-    <td><input type="text" size="5" name="exclusive_py"></td>
-    <td>&nbsp;</td>
-    <td><input type="text" size="5" name="계약(py)"></td>
-    <td><input type="text" name="대지권m2" value="{{ landsize }}"></td>
-    <td><input type="text" size="5" name="대지권(py)"></td>
-    <td><input type="text" size="5" name="전용율"></td>
-    <td><input type="text" size="5" name="금액(원)(A)"></td>
-    <td><input type="text" size="5" name="전유단가(py)(A)"></td>
-    <td><input type="text" size="5" name="계약단가(py)(A)"></td>
-    <td><input type="text" size="5" name="가구비"></td>
-    <td><input type="text" size="5" name="금액(원)(M)"></td>
-    <td><input type="text" size="5" name="전유단가(py)(M)"></td>
-    <td><input type="text" size="5" name="계약단가(py)(M)"></td>
-    <td><input type="text" size="5" name="M/A"></td>
-    <td><input type="text" size="5" name="금액(원)(E)"></td>
-    <td><input type="text" size="5" name="전유단가(py)(E)"></td>
-    <td><input type="text" size="5" name="계약단가(py)(E)"></td>
-    <td><input type="text" size="5" name="E/A"></td>
-    <td><input type="text" size="5" name="E/M"></td>
+    <td><input type="text" name="building_label[]" value="{{label}}"></td>
+    <td><input type="text" name="building_ho[]" value="{{ho}}"></td>
+    <td><input type="text" name="building_exclusive_m[]" value="{{liensize_improvement}}"></td>
+    <td><input type="text" size="5" name="building_exclusive_py[]"></td>
+    <td><input type="text" name="building_contract_m[]"></td>
+    <td><input type="text" size="5" name="building_contract_py[]"></td>
+    <td><input type="text" name="building_right_m[]" value="{{ landsize }}"></td>
+    <td><input type="text" size="5" name="building_right_py[]"></td>
+    <td><input type="text" size="5" name="building_ratio[]"></td>
+    <td><input type="text" size="5" name="building_auction_price[]"></td>
+    <td><input type="text" size="5" name="building_auction_exclusive[]"></td>
+    <td><input type="text" size="5" name="building_auction_contract[]"></td>
+    <td><input type="text" size="5" name="building_auction_ratio[]"></td>
+    <td><input type="text" size="5" name="building_market_price[]"></td>
+    <td><input type="text" size="5" name="building_market_exclusive[]"></td>
+    <td><input type="text" size="5" name="building_market_contract[]"></td>
+    <td><input type="text" size="5" name="building_market_ma[]"></td>
+    <td><input type="text" size="5" name="building_estimated_price[]"></td>
+    <td><input type="text" size="5" name="building_estimated_exclusive[]"></td>
+    <td><input type="text" size="5" name="building_estimated_contract[]"></td>
+    <td><input type="text" size="5" name="building_estimated_ea[]"></td>
+    <td><input type="text" size="5" name="building_estimated_em[]"></td>
 </tr>
 {% endfor %}
 <tr align="center">
