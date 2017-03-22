@@ -26,20 +26,22 @@ def upload_file(request):
             workbook =excel_handling().make_file(new_document.file)
             normal_datas=excel_handling().get_normal(workbook)
             normal_codes=excel_handling().get_normal_code(workbook)
-            normals=zip(normal_datas, normal_codes)
+            normal_zip=zip(normal_datas, normal_codes)
             file=Document.objects.filter(title=new_document.title)
+            animal = ['cat', 'dog', 'mause']
+            how_many = ['one', 'two', 'three']
+            data = zip(animal, how_many)
+
             #해당파일이 이미 존재하면 저장하지 않고 해당파일이 없다면 해당 파일의 데이터 모델을 저장한다
             if(len(file)==0):
                 new_document.save()
 
-            return render(request,'ibk/code_selection.html', {'normals':normals, 'file':new_document})
+            return render(request,'ibk/templatemo_497_upper/templatemo_497_upper/code_selection.html', {'normals':normal_zip, 'file':new_document, 'codes':data})
 
     else:
         form=UploadFileForm()
-    documents = Document.objects.all()
 
-
-    return render(request,'ibk/upload_file.html',{'documents':documents, 'form':form})
+    return render(request,'ibk/templatemo_497_upper/templatemo_497_upper/form.html',{'form':form})
 
 #탁감 보고서를 작성하기 위해 엑셀데이터에서 필요한 데이터를 추출해서 html 페이지로 데이터를 보내준다
 def show_normal_report(request, code):

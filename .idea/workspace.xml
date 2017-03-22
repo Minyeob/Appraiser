@@ -2,13 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35dad2ea-d3e3-44e7-9b01-da782b1574fa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/font-awesome-4.5.0/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/font-awesome-4.5.0/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/font-awesome-4.5.0/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/font-awesome-4.5.0/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/font-awesome-4.5.0/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/img/tm-bg-1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/img/tm-bg-2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/img/tm-bg-3.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/img/tm-bg-4.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/font-awesome-4.5.0/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/font-awesome-4.5.0/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/font-awesome-4.5.0/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/font-awesome-4.5.0/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/font-awesome-4.5.0/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/img/city-bg-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/img/city-bg-3.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/img/tm-bg-1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/img/tm-bg-2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/img/tm-bg-3.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/img/tm-bg-4.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/css/hero-slider-style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/css/magnific-popup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/css/selection.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/css/templatemo-style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/font-awesome-4.5.0/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/font-awesome-4.5.0/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/js/hero-slider-main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/js/jquery-1.11.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/static/js/jquery.magnific-popup.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/.idea/templatemo_497_upper.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/code_selection.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/css/hero-slider-style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/css/magnific-popup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/css/templatemo-style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/font-awesome-4.5.0/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/font-awesome-4.5.0/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/js/hero-slider-main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/js/jquery-1.11.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/js/jquery.magnific-popup.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ibk_output.xls" afterPath="$PROJECT_DIR$/ibk_output.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/output_sample.xls" afterPath="$PROJECT_DIR$/media/output_sample.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ibk/forms.py" afterPath="$PROJECT_DIR$/ibk/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ibk/function.py" afterPath="$PROJECT_DIR$/ibk/function.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Appraiser/settings.py" afterPath="$PROJECT_DIR$/Appraiser/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Appraiser/urls.py" afterPath="$PROJECT_DIR$/Appraiser/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ibk/templates/ibk/code_selection.html" afterPath="$PROJECT_DIR$/ibk/templates/ibk/code_selection.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ibk/templates/ibk/report.html" afterPath="$PROJECT_DIR$/ibk/templates/ibk/report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ibk/templates/ibk/upload_file.html" afterPath="$PROJECT_DIR$/ibk/templates/ibk/upload_file.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ibk/views.py" afterPath="$PROJECT_DIR$/ibk/views.py" />
     </list>
     <ignored path="Appraiser.iws" />
@@ -36,13 +85,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="function.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ibk/function.py">
+      <file leaf-file-name="form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="429" column="85" lean-forward="false" selection-start-line="429" selection-start-column="85" selection-end-line="429" selection-end-column="85" />
+            <state relative-caret-position="200">
+              <caret line="83" column="132" lean-forward="false" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="132" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,8 +101,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ibk/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="163" column="97" lean-forward="false" selection-start-line="163" selection-start-column="97" selection-end-line="163" selection-end-column="97" />
+            <state relative-caret-position="350">
+              <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -60,12 +110,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ibk/forms.py">
+      <file leaf-file-name="code_selection.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/code_selection.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="80" column="15" lean-forward="true" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="200">
+              <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,48 +126,40 @@
       <file leaf-file-name="report.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/report.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="257" column="46" lean-forward="true" selection-start-line="257" selection-start-column="46" selection-end-line="257" selection-end-column="46" />
+            <state relative-caret-position="593">
+              <caret line="687" column="34" lean-forward="false" selection-start-line="687" selection-start-column="34" selection-end-line="687" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#9;n#form#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selection.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ibk/static/css/selection.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1507">
+              <caret line="135" column="1" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/index2.html">
+      <file leaf-file-name="templatemo-style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ibk/static/css/templatemo-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3225">
-              <caret line="129" column="66" lean-forward="false" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="66" />
+            <state relative-caret-position="43">
+              <caret line="157" column="1" lean-forward="false" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/index.html">
+      <file leaf-file-name="code_selection.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/code_selection.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4250">
-              <caret line="170" column="11" lean-forward="false" selection-start-line="170" selection-start-column="11" selection-end-line="170" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload_file.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/upload_file.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="normal_report.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/normal_report.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="75">
+              <caret line="9" column="76" lean-forward="true" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -125,29 +170,44 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>media</find>
-      <find>base_dir</find>
-      <find>get_title</find>
-      <find>self</find>
-      <find>borrower</find>
-      <find>pool</find>
-      <find>postcode</find>
-      <find>역삼동</find>
-      <find>httprespon</find>
-      <find>request</find>
-      <find>documents</find>
-      <find>property</find>
-      <find>court</find>
-      <find>print</find>
-      <find>호</find>
-      <find>estimated_price</find>
+      <find>nav-item</find>
+      <find>href</find>
+      <find>round</find>
+      <find>js</find>
+      <find>img</find>
+      <find>tm-img-gall</find>
+      <find>tm-img-gallery</find>
+      <find>보고서 작성</find>
+      <find>gallery-one</find>
+      <find>image</find>
+      <find>li:nth</find>
+      <find>data-page-no</find>
+      <find>page</find>
+      <find>tm-text-title</find>
+      <find>font</find>
+      <find>pageNo</find>
+      <find>tm-white</find>
+      <find>google</find>
+      <find>li:nth-of</find>
+      <find>tm-bg</find>
+      <find>adjustHeightOfPage</find>
+      <find>popup</find>
+      <find>nav-l</find>
+      <find>li:</find>
+      <find>click</find>
+      <find>magnificPopup</find>
+      <find>cd-hero-slider</find>
+      <find>ul</find>
+      <find>templatemo</find>
+      <find>li</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,22 +228,32 @@
         <option value="$PROJECT_DIR$/estimation/functiom.py" />
         <option value="$PROJECT_DIR$/estimation/views.py" />
         <option value="$PROJECT_DIR$/estimation/templates/estimation/report.html" />
-        <option value="$PROJECT_DIR$/Appraiser/settings.py" />
         <option value="$PROJECT_DIR$/ibk/admin.py" />
         <option value="$PROJECT_DIR$/ibk/models.py" />
-        <option value="$PROJECT_DIR$/Appraiser/urls.py" />
         <option value="$PROJECT_DIR$/ibk/templates/ibk/check.html" />
-        <option value="$PROJECT_DIR$/ibk/templates/ibk/code_selection.html" />
         <option value="$PROJECT_DIR$/ibk/urls.py" />
         <option value="$PROJECT_DIR$/ibk/templates/ibk/index2.html" />
         <option value="$PROJECT_DIR$/ibk/templates/ibk/index.html" />
         <option value="$USER_HOME$/Desktop/lpt_capt.py" />
         <option value="$PROJECT_DIR$/ibk/templates/ibk/normal_report.html" />
         <option value="$PROJECT_DIR$/ibk/templates/ibk/upload_file.html" />
-        <option value="$PROJECT_DIR$/ibk/forms.py" />
         <option value="$PROJECT_DIR$/ibk/function.py" />
-        <option value="$PROJECT_DIR$/ibk/templates/ibk/report.html" />
+        <option value="$PROJECT_DIR$/Appraiser/views.py" />
+        <option value="$PROJECT_DIR$/ibk/forms.py" />
+        <option value="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/report.html" />
+        <option value="$PROJECT_DIR$/Appraiser/urls.py" />
+        <option value="$PROJECT_DIR$/Appraiser/settings.py" />
+        <option value="$PROJECT_DIR$/ibk/static/css/hero-slider-style.css" />
+        <option value="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/css/templatemo-style.css" />
+        <option value="C:/TIL/django/django.md" />
+        <option value="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/index.html" />
+        <option value="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/form.html" />
+        <option value="$PROJECT_DIR$/ibk/templates/ibk/code_selection.html" />
         <option value="$PROJECT_DIR$/ibk/views.py" />
+        <option value="$PROJECT_DIR$/ibk/static/css/templatemo-style.css" />
+        <option value="$PROJECT_DIR$/ibk/static/css/selection.css" />
+        <option value="$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/code_selection.html" />
+        <option value="$PROJECT_DIR$/ibk/templates/ibk/report.html" />
       </list>
     </option>
   </component>
@@ -217,6 +287,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -240,7 +311,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="media" />
+              <option name="myItemId" value="staticfiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="staticfiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -268,29 +357,127 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ibk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatemo_497_upper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatemo_497_upper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatemo_497_upper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Appraiser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Appraiser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Appraiser-master (2)/Appraiser-master" />
+    <property name="last_opened_file_path" value="C:/TIL/django/django.md" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Appraiser\ibk\templates\ibk\templatemo_497_upper\templatemo_497_upper\img" />
+      <recent name="C:\Appraiser\ibk\templates" />
+      <recent name="C:\Appraiser\ibk" />
       <recent name="C:\Appraiser\ibk\templates\ibk" />
       <recent name="C:\Appraiser\media" />
-      <recent name="C:\Appraiser\ibk" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Appraiser\ibk\templates\ibk" />
@@ -603,13 +790,14 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23854166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29088914" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30735457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28979144" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@Appraiser" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -620,7 +808,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@Appraiser" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -643,116 +830,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Appraiser/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/apps.py" />
-    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Appraiser/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/apps.py" />
-    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Appraiser/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/apps.py" />
-    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Appraiser/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/apps.py" />
-    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Appraiser/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/VE/Lib/site-packages/django/views/generic/list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/bookmark_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/check.html" />
-    <entry file="file://$PROJECT_DIR$/index">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/templates/estimation/upload_file.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estimation/function.py" />
-    <entry file="file://$PROJECT_DIR$/media/code_address.txt" />
     <entry file="file://$PROJECT_DIR$/ibk/templates/estimation/report.html" />
     <entry file="file://$PROJECT_DIR$/estimation/functiom.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -826,28 +903,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/check.html" />
     <entry file="file://$USER_HOME$/Desktop/lpt_capt.py" />
-    <entry file="file://$PROJECT_DIR$/ibk/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/code_selection.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/normal_report.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,15 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4250">
-          <caret line="170" column="11" lean-forward="false" selection-start-line="170" selection-start-column="11" selection-end-line="170" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,59 +921,230 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3225">
           <caret line="129" column="66" lean-forward="false" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
+    <entry file="file://$PROJECT_DIR$/ibk/static/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-750">
-          <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Appraiser/urls.py">
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ibk/forms.py">
+    <entry file="file://$PROJECT_DIR$/Appraiser/views.py" />
+    <entry file="file://$PROJECT_DIR$/ibk/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="80" column="15" lean-forward="true" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
+        <state relative-caret-position="150">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ibk/function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="429" column="85" lean-forward="false" selection-start-line="429" selection-start-column="85" selection-end-line="429" selection-end-column="85" />
+        <state relative-caret-position="149">
+          <caret line="416" column="28" lean-forward="false" selection-start-line="416" selection-start-column="28" selection-end-line="416" selection-end-column="28" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/img/tm-bg-1.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-802">
+          <caret line="170" column="11" lean-forward="false" selection-start-line="170" selection-start-column="11" selection-end-line="170" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/js/jquery.magnific-popup.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/css/magnific-popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staticfiles/img/city-bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/img/tm-bg-4.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Appraiser/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/css/templatemo-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="141" column="9" lean-forward="true" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/TIL/django/django.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="222">
+            <caret line="355" column="32" lean-forward="true" selection-start-line="355" selection-start-column="32" selection-end-line="355" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Appraiser/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="129" column="16" lean-forward="false" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/js/jquery-1.11.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="1" column="4595" lean-forward="false" selection-start-line="1" selection-start-column="4595" selection-end-line="1" selection-end-column="4595" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="251" column="72" lean-forward="false" selection-start-line="251" selection-start-column="72" selection-end-line="251" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="83" column="132" lean-forward="false" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="132" />
+          <folding>
+            <element signature="n#style#0;n#p#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ibk/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="163" column="97" lean-forward="false" selection-start-line="163" selection-start-column="97" selection-end-line="163" selection-end-column="97" />
+        <state relative-caret-position="350">
+          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="225" column="34" lean-forward="false" selection-start-line="225" selection-start-column="34" selection-end-line="225" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/code_selection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="76" lean-forward="true" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/css/templatemo-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="157" column="1" lean-forward="false" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/css/magnific-popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="327" column="10" lean-forward="false" selection-start-line="327" selection-start-column="7" selection-end-line="327" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/img/tm-bg-2.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/img/tm-bg-3.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/css/hero-slider-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="294" column="32" lean-forward="false" selection-start-line="294" selection-start-column="30" selection-end-line="294" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/static/css/selection.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1507">
+          <caret line="135" column="1" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/templatemo_497_upper/templatemo_497_upper/code_selection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ibk/templates/ibk/report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="257" column="46" lean-forward="true" selection-start-line="257" selection-start-column="46" selection-end-line="257" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="593">
+          <caret line="687" column="34" lean-forward="false" selection-start-line="687" selection-start-column="34" selection-end-line="687" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#9;n#form#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
