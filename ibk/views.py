@@ -70,10 +70,37 @@ def show_normal_report(request, code):
     label=['가','나','다','라','마','바','사','아','자','차','카','타','파','하']
     ho=excel_handling().get_ho(workbook, code)  #건물의 호들
     liensize_improvement=excel_handling().get_liensize_improvement(workbook, code)  #전유면적 - 일단 엑셀에서 건물면적을 꺼내서 구함
-    landsize=excel_handling().get_landsize(workbook, code)  #대지권 면적
-    building=zip(label, ho, liensize_improvement, landsize)
-    utensil=excel_handling().get_utensil(workbook, loc) #기계기구의 숫자
+    liensize_improvement_py=[]
+    for index in liensize_improvement:
+        index=round(float(index)/3.3,2)
+        liensize_improvement_py.append(index)
 
+    landsize=excel_handling().get_landsize(workbook, code)  #대지권 면적
+    landsize_py=[]
+    for index in landsize:
+        index=round(float(index)/3.3,2)
+        landsize_py.append(index)
+    sum_ho=len(ho)
+    sum_liensize_improvement=0
+    sum_liensize_improvement_py= 0
+    sum_landsize=0
+    sum_landsize_py= 0
+    for a in liensize_improvement:
+        sum_liensize_improvement=sum_liensize_improvement+round(float(a),2)
+    for a in liensize_improvement_py:
+        sum_liensize_improvement_py=sum_liensize_improvement_py+round(float(a),2)
+    for a in landsize:
+        sum_landsize=sum_landsize+round(float(a),2)
+    for a in landsize_py:
+        sum_landsize_py=sum_landsize_py+round(float(a),2)
+    sum_liensize_improvement=round(sum_liensize_improvement,2)
+    sum_liensize_improvement_py=round(sum_liensize_improvement_py,2)
+    sum_landsize=round(sum_landsize,2)
+    sum_landsize_py=round(sum_landsize_py,2)
+
+
+    building = zip(label, ho, liensize_improvement, liensize_improvement_py, landsize, landsize_py)
+    utensil = excel_handling().get_utensil(workbook, loc)  # 기계기구의 숫자
     address_code=excel_handling().get_address_code(workbook,loc)
 
     #url = 'http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcSHRent?LAWD_CD=11110&DEAL_YMD=201702&serviceKey=KqP4dQTZbN2QbXZlZUK0gYsfRfqiACwnmgqPf3N2yPqj%2F7Ura0eDpY1CKVPmzzQRqGS3myGv3Oauhw7YmfPDLg%3D%3D'
@@ -85,7 +112,8 @@ def show_normal_report(request, code):
     return render(request, 'ibk/report.html',
                   {'code':code,'borrow_name':borrow_name, 'program':program_title, 'property_control_no':property_control_no, 'court':court, 'case':case, 'opb':opb,
                    'interest':interest, 'setup_price':setup_price, 'address':address, 'category':category, 'building':building, 'utensil':utensil,
-                   'address_code':address_code})
+                   'address_code':address_code, 'sum_ho':sum_ho, 'sum_liensize_improvement':sum_liensize_improvement,
+                   'sum_liensize_improvement_py':sum_liensize_improvement_py, 'sum_landsize':sum_landsize, 'sum_landsize_py':sum_landsize_py})
 
 def download(request):
     if request.method == 'POST':
@@ -169,7 +197,280 @@ def download(request):
             user_input['building_estimated_ea'] = request.POST.getlist('building_estimated_ea[]')
             user_input['building_estimated_em'] = request.POST.getlist('building_estimated_em[]')
 
-            print(user_input['building_estimated_price'])
+            user_input['summary_ho'] = form.cleaned_data['summary_ho']
+            user_input['summary_exclusive_m'] = form.cleaned_data['summary_exclusive_m']
+            user_input['summary_exclusive_py'] = form.cleaned_data['summary_exclusive_py']
+            user_input['summary_contract_m'] = form.cleaned_data['summary_contract_m']
+            user_input['summary_contract_py'] = form.cleaned_data['summary_contract_py']
+            user_input['summary_right_m'] = form.cleaned_data['summary_right_m']
+            user_input['summary_right_py'] = form.cleaned_data['summary_right_py']
+            user_input['summary_ratio'] = form.cleaned_data['summary_ratio']
+            user_input['summary_auction_price'] = form.cleaned_data['summary_auction_price']
+            user_input['summary_auction_exclusive'] = form.cleaned_data['summary_auction_exclusive']
+            user_input['summary_auction_contract'] = form.cleaned_data['summary_auction_contract']
+            user_input['summary_auction_ratio'] = form.cleaned_data['summary_auction_ratio']
+            user_input['summary_market_price'] = form.cleaned_data['summary_market_price']
+            user_input['summary_market_exclusive'] = form.cleaned_data['summary_market_exclusive']
+            user_input['summary_market_contract'] = form.cleaned_data['summary_market_contract']
+            user_input['summary_market_ma'] = form.cleaned_data['summary_market_ma']
+            user_input['summary_estimated_price'] = form.cleaned_data['summary_estimated_price']
+            user_input['summary_estimated_exclusive'] = form.cleaned_data['summary_estimated_exclusive']
+            user_input['summary_estimated_contract'] = form.cleaned_data['summary_estimated_contract']
+            user_input['summary_estimated_ea'] = form.cleaned_data['summary_estimated_ea']
+            user_input['summary_estimated_em'] = form.cleaned_data['summary_estimated_em']
+
+            #제시외건물,기계
+            user_input['except_label'] = form.cleaned_data['except_label']
+            user_input['except_class'] = form.cleaned_data['except_class']
+            user_input['except_ho'] = form.cleaned_data['except_ho']
+            user_input['except_name'] = form.cleaned_data['except_name']
+            user_input['except_use'] = form.cleaned_data['except_use']
+            user_input['except_size_m'] = form.cleaned_data['except_size_m']
+            user_input['except_size_py'] = form.cleaned_data['except_size_py']
+            user_input['except_auction_won'] = form.cleaned_data['except_auction_won']
+            user_input['except_auction_m'] = form.cleaned_data['except_auction_m']
+            user_input['except_auction_py'] = form.cleaned_data['except_auction_py']
+            user_input['except_auction_percent'] = form.cleaned_data['except_auction_percent']
+            user_input['except_market_won'] = form.cleaned_data['except_market_won']
+            user_input['except_market_m'] = form.cleaned_data['except_market_m']
+            user_input['except_market_py'] = form.cleaned_data['except_market_py']
+            user_input['except_market_ma'] = form.cleaned_data['except_market_ma']
+            user_input['except_est_won'] = form.cleaned_data['except_est_won']
+            user_input['except_est_m'] = form.cleaned_data['except_est_m']
+            user_input['except_est_py'] = form.cleaned_data['except_est_py']
+            user_input['except_est_ea'] = form.cleaned_data['except_est_ea']
+            user_input['except_est_em'] = form.cleaned_data['except_est_em']
+
+            user_input['machine_label'] = form.cleaned_data['machine_label']
+            user_input['machine_class'] = form.cleaned_data['machine_class']
+            user_input['machine_ho'] = form.cleaned_data['machine_ho']
+            user_input['machine_name'] = form.cleaned_data['machine_name']
+            user_input['machine_use'] = form.cleaned_data['machine_use']
+            user_input['machine_size_m'] = form.cleaned_data['machine_size_m']
+            user_input['machine_size_py'] = form.cleaned_data['machine_size_py']
+            user_input['machine_auction_won'] = form.cleaned_data['machine_auction_won']
+            user_input['machine_auction_m'] = form.cleaned_data['machine_auction_m']
+            user_input['machine_auction_py'] = form.cleaned_data['machine_auction_py']
+            user_input['machine_auction_percent'] = form.cleaned_data['machine_auction_percent']
+            user_input['machine_market_won'] = form.cleaned_data['machine_market_won']
+            user_input['machine_market_m'] = form.cleaned_data['machine_market_m']
+            user_input['machine_market_py'] = form.cleaned_data['machine_market_py']
+            user_input['machine_market_ma'] = form.cleaned_data['machine_market_ma']
+            user_input['machine_est_won'] = form.cleaned_data['machine_est_won']
+            user_input['machine_est_m'] = form.cleaned_data['machine_est_m']
+            user_input['machine_est_py'] = form.cleaned_data['machine_est_py']
+            user_input['machine_est_ea'] = form.cleaned_data['machine_est_ea']
+            user_input['machine_est_em'] = form.cleaned_data['machine_est_em']
+
+            user_input['sum_auction_won'] = form.cleaned_data['sum_auction_won']
+            user_input['sum_auction_m'] = form.cleaned_data['sum_auction_m']
+            user_input['sum_auction_py'] = form.cleaned_data['sum_auction_py']
+            user_input['sum_auction_percent'] = form.cleaned_data['sum_auction_percent']
+            user_input['sum_market_won'] = form.cleaned_data['sum_market_won']
+            user_input['sum_market_m'] = form.cleaned_data['sum_market_m']
+            user_input['sum_market_py'] = form.cleaned_data['sum_market_py']
+            user_input['sum_market_ma'] = form.cleaned_data['sum_market_ma']
+            user_input['sum_est_won'] = form.cleaned_data['sum_est_won']
+            user_input['sum_est_m'] = form.cleaned_data['sum_est_m']
+            user_input['sum_est_py'] = form.cleaned_data['sum_est_py']
+            user_input['sum_est_ea'] = form.cleaned_data['sum_est_ea']
+            user_input['sum_est_em'] = form.cleaned_data['sum_est_em']
+
+            #합계
+            user_input['result_auction_won'] = form.cleaned_data['result_auction_won']
+            user_input['result_auction_m'] = form.cleaned_data['result_auction_m']
+            user_input['result_auction_py'] = form.cleaned_data['result_auction_py']
+            user_input['result_auction_percent'] = form.cleaned_data['result_auction_percent']
+            user_input['result_market_won'] = form.cleaned_data['result_market_won']
+            user_input['result_market_m'] = form.cleaned_data['result_market_m']
+            user_input['result_market_py'] = form.cleaned_data['result_market_py']
+            user_input['result_market_ma'] = form.cleaned_data['result_market_ma']
+            user_input['result_est_won'] = form.cleaned_data['result_est_won']
+            user_input['result_est_m'] = form.cleaned_data['result_est_m']
+            user_input['result_est_py'] = form.cleaned_data['result_est_py']
+            user_input['result_est_ea'] = form.cleaned_data['result_est_ea']
+            user_input['result_est_em'] = form.cleaned_data['result_est_em']
+
+            #인근거래사례
+            user_input['trade_up_loc'] = form.cleaned_data['trade_up_loc']
+            user_input['trade_up_floor'] = form.cleaned_data['trade_up_floor']
+            user_input['trade_up_structure'] = form.cleaned_data['trade_up_structure']
+            user_input['trade_up_approval_date'] = form.cleaned_data['trade_up_approval_date']
+            user_input['trade_up_fail_count'] = form.cleaned_data['trade_up_fail_count']
+            user_input['trade_up_base_date'] = form.cleaned_data['trade_up_base_date']
+            user_input['trade_up_exclusive_m'] = form.cleaned_data['trade_up_exclusive_m']
+            user_input['trade_up_exclusive_py'] = form.cleaned_data['trade_up_exclusive_py']
+            user_input['trade_up_right_m'] = form.cleaned_data['trade_up_right_m']
+            user_input['trade_law_price_won'] = form.cleaned_data['trade_law_price_won']
+            user_input['trade_law_price_exclusive'] = form.cleaned_data['trade_law_price_exclusive']
+            user_input['trade_law_price_contract'] = form.cleaned_data['trade_law_price_contract']
+            user_input['trade_bid_won'] = form.cleaned_data['trade_bid_won']
+            user_input['trade_bid_exclusive'] = form.cleaned_data['trade_bid_exclusive']
+            user_input['trade_bid_contract'] = form.cleaned_data['trade_bid_contract']
+            user_input['trade_up_bidder'] = form.cleaned_data['trade_up_bidder']
+            user_input['trade_up_bid_percent'] = form.cleaned_data['trade_up_bid_percent']
+
+            user_input['trade_down_loc'] = form.cleaned_data['trade_down_loc']
+            user_input['trade_down_floor'] = form.cleaned_data['trade_down_floor']
+            user_input['trade_down_structure'] = form.cleaned_data['trade_down_structure']
+            user_input['trade_down_approval_date'] = form.cleaned_data['trade_down_approval_date']
+            user_input['trade_down_fail_count'] = form.cleaned_data['trade_down_fail_count']
+            user_input['trade_down_base_date'] = form.cleaned_data['trade_down_base_date']
+            user_input['trade_down_exclusive_m'] = form.cleaned_data['trade_down_exclusive_m']
+            user_input['trade_down_exclusive_py'] = form.cleaned_data['trade_down_exclusive_py']
+            user_input['trade_down_right_m'] = form.cleaned_data['trade_down_right_m']
+            user_input['trade_down_bidder'] = form.cleaned_data['trade_down_bidder']
+            user_input['trade_down_bid_percent'] = form.cleaned_data['trade_down_bid_percent']
+
+            user_input['trade2_up_loc'] = form.cleaned_data['trade2_up_loc']
+            user_input['trade2_up_floor'] = form.cleaned_data['trade2_up_floor']
+            user_input['trade2_up_structure'] = form.cleaned_data['trade2_up_structure']
+            user_input['trade2_up_approval_date'] = form.cleaned_data['trade2_up_approval_date']
+            user_input['trade2_up_fail_count'] = form.cleaned_data['trade2_up_fail_count']
+            user_input['trade2_up_base_date'] = form.cleaned_data['trade2_up_base_date']
+            user_input['trade2_up_exclusive_m'] = form.cleaned_data['trade2_up_exclusive_m']
+            user_input['trade2_up_exclusive_py'] = form.cleaned_data['trade2_up_exclusive_py']
+            user_input['trade2_up_right_m'] = form.cleaned_data['trade2_up_right_m']
+            user_input['trade2_law_price_won'] = form.cleaned_data['trade2_law_price_won']
+            user_input['trade2_law_price_exclusive'] = form.cleaned_data['trade2_law_price_exclusive']
+            user_input['trade2_law_price_contract'] = form.cleaned_data['trade2_law_price_contract']
+            user_input['trade2_bid_won'] = form.cleaned_data['trade2_bid_won']
+            user_input['trade2_bid_exclusive'] = form.cleaned_data['trade2_bid_exclusive']
+            user_input['trade2_bid_contract'] = form.cleaned_data['trade2_bid_contract']
+            user_input['trade2_up_bidder'] = form.cleaned_data['trade2_up_bidder']
+            user_input['trade2_up_bid_percent'] = form.cleaned_data['trade2_up_bid_percent']
+
+            user_input['trade2_down_loc'] = form.cleaned_data['trade2_down_loc']
+            user_input['trade2_down_floor'] = form.cleaned_data['trade2_down_floor']
+            user_input['trade2_down_structure'] = form.cleaned_data['trade2_down_structure']
+            user_input['trade2_down_approval_date'] = form.cleaned_data['trade2_down_approval_date']
+            user_input['trade2_down_fail_count'] = form.cleaned_data['trade2_down_fail_count']
+            user_input['trade2_down_base_date'] = form.cleaned_data['trade2_down_base_date']
+            user_input['trade2_down_exclusive_m'] = form.cleaned_data['trade2_down_exclusive_m']
+            user_input['trade2_down_exclusive_py'] = form.cleaned_data['trade2_down_exclusive_py']
+            user_input['trade2_down_right_m'] = form.cleaned_data['trade2_down_right_m']
+            user_input['trade2_down_bidder'] = form.cleaned_data['trade2_down_bidder']
+            user_input['trade2_down_bid_percent'] = form.cleaned_data['trade2_down_bid_percent']
+
+            #인근낙찰사례
+            user_input['bid_up_loc'] = form.cleaned_data['bid_up_loc']
+            user_input['bid_up_floor'] = form.cleaned_data['bid_up_floor']
+            user_input['bid_up_structure'] = form.cleaned_data['bid_up_structure']
+            user_input['bid_up_approval_date'] = form.cleaned_data['bid_up_approval_date']
+            user_input['bid_up_fail_count'] = form.cleaned_data['bid_up_fail_count']
+            user_input['bid_up_base_date'] = form.cleaned_data['bid_up_base_date']
+            user_input['bid_up_exclusive_m'] = form.cleaned_data['bid_up_exclusive_m']
+            user_input['bid_up_exclusive_py'] = form.cleaned_data['bid_up_exclusive_py']
+            user_input['bid_up_right_m'] = form.cleaned_data['bid_up_right_m']
+            user_input['bid_law_price_won'] = form.cleaned_data['bid_law_price_won']
+            user_input['bid_law_price_exclusive'] = form.cleaned_data['bid_law_price_exclusive']
+            user_input['bid_law_price_contract'] = form.cleaned_data['bid_law_price_contract']
+            user_input['bid_bid_won'] = form.cleaned_data['bid_bid_won']
+            user_input['bid_bid_exclusive'] = form.cleaned_data['bid_bid_exclusive']
+            user_input['bid_bid_contract'] = form.cleaned_data['bid_bid_contract']
+            user_input['bid_up_bidder'] = form.cleaned_data['bid_up_bidder']
+            user_input['bid_up_bid_percent'] = form.cleaned_data['bid_up_bid_percent']
+
+            user_input['bid_down_loc'] = form.cleaned_data['bid_down_loc']
+            user_input['bid_down_floor'] = form.cleaned_data['bid_down_floor']
+            user_input['bid_down_structure'] = form.cleaned_data['bid_down_structure']
+            user_input['bid_down_approval_date'] = form.cleaned_data['bid_down_approval_date']
+            user_input['bid_down_fail_count'] = form.cleaned_data['bid_down_fail_count']
+            user_input['bid_down_base_date'] = form.cleaned_data['bid_down_base_date']
+            user_input['bid_down_exclusive_m'] = form.cleaned_data['bid_down_exclusive_m']
+            user_input['bid_down_exclusive_py'] = form.cleaned_data['bid_down_exclusive_py']
+            user_input['bid_down_right_m'] = form.cleaned_data['bid_down_right_m']
+            user_input['bid_down_bidder'] = form.cleaned_data['bid_down_bidder']
+            user_input['bid_down_bid_percent'] = form.cleaned_data['bid_down_bid_percent']
+
+            user_input['bid2_up_loc'] = form.cleaned_data['bid2_up_loc']
+            user_input['bid2_up_floor'] = form.cleaned_data['bid2_up_floor']
+            user_input['bid2_up_structure'] = form.cleaned_data['bid2_up_structure']
+            user_input['bid2_up_approval_date'] = form.cleaned_data['bid2_up_approval_date']
+            user_input['bid2_up_fail_count'] = form.cleaned_data['bid2_up_fail_count']
+            user_input['bid2_up_base_date'] = form.cleaned_data['bid2_up_base_date']
+            user_input['bid2_up_exclusive_m'] = form.cleaned_data['bid2_up_exclusive_m']
+            user_input['bid2_up_exclusive_py'] = form.cleaned_data['bid2_up_exclusive_py']
+            user_input['bid2_up_right_m'] = form.cleaned_data['bid2_up_right_m']
+            user_input['bid2_law_price_won'] = form.cleaned_data['bid2_law_price_won']
+            user_input['bid2_law_price_exclusive'] = form.cleaned_data['bid2_law_price_exclusive']
+            user_input['bid2_law_price_contract'] = form.cleaned_data['bid2_law_price_contract']
+            user_input['bid2_bid_won'] = form.cleaned_data['bid2_bid_won']
+            user_input['bid2_bid_exclusive'] = form.cleaned_data['bid2_bid_exclusive']
+            user_input['bid2_bid_contract'] = form.cleaned_data['bid2_bid_contract']
+            user_input['bid2_up_bidder'] = form.cleaned_data['bid2_up_bidder']
+            user_input['bid2_up_bid_percent'] = form.cleaned_data['bid2_up_bid_percent']
+
+            user_input['bid2_down_loc'] = form.cleaned_data['bid2_down_loc']
+            user_input['bid2_down_floor'] = form.cleaned_data['bid2_down_floor']
+            user_input['bid2_down_structure'] = form.cleaned_data['bid2_down_structure']
+            user_input['bid2_down_approval_date'] = form.cleaned_data['bid2_down_approval_date']
+            user_input['bid2_down_fail_count'] = form.cleaned_data['bid2_down_fail_count']
+            user_input['bid2_down_base_date'] = form.cleaned_data['bid2_down_base_date']
+            user_input['bid2_down_exclusive_m'] = form.cleaned_data['bid2_down_exclusive_m']
+            user_input['bid2_down_exclusive_py'] = form.cleaned_data['bid2_down_exclusive_py']
+            user_input['bid2_down_right_m'] = form.cleaned_data['bid2_down_right_m']
+            user_input['bid2_down_bidder'] = form.cleaned_data['bid2_down_bidder']
+            user_input['bid2_down_bid_percent'] = form.cleaned_data['bid2_down_bid_percent']
+
+
+            #본건 거래사례, 낙찰사례
+            user_input['example_name'] = form.cleaned_data['example_name']
+            user_input['example_date'] = form.cleaned_data['example_date']
+            user_input['example_seller'] = form.cleaned_data['example_seller']
+            user_input['example_buyer'] = form.cleaned_data['example_buyer']
+            user_input['example_price'] = form.cleaned_data['example_price']
+            user_input['example_contract'] = form.cleaned_data['example_contract']
+            user_input['example_case'] = form.cleaned_data['example_case']
+
+            user_input['example2_name'] = form.cleaned_data['example2_name']
+            user_input['example2_date'] = form.cleaned_data['example2_date']
+            user_input['example2_seller'] = form.cleaned_data['example2_seller']
+            user_input['example2_buyer'] = form.cleaned_data['example2_buyer']
+            user_input['example2_price'] = form.cleaned_data['example2_price']
+            user_input['example2_contract'] = form.cleaned_data['example2_contract']
+            user_input['example2_case'] = form.cleaned_data['example2_case']
+
+            user_input['example3_name'] = form.cleaned_data['example3_name']
+            user_input['example3_date'] = form.cleaned_data['example3_date']
+            user_input['example3_seller'] = form.cleaned_data['example3_seller']
+            user_input['example3_buyer'] = form.cleaned_data['example3_buyer']
+            user_input['example3_price'] = form.cleaned_data['example3_price']
+            user_input['example3_contract'] = form.cleaned_data['example3_contract']
+            user_input['example3_case'] = form.cleaned_data['example3_case']
+
+            #종합의견
+            user_input['analysis_law_price'] = form.cleaned_data['analysis_law_price']
+            user_input['analysis_market_concern']=form.cleaned_data['analysis_market_concern']
+            user_input['analysis_price_level'] = form.cleaned_data['analysis_price_level']
+            user_input['analysis_rent_level'] = form.cleaned_data['analysis_rent_level']
+            user_input['analysis_price_decision'] = form.cleaned_data['analysis_price_decision']
+
+            #낙찰가율 통계
+            user_input['statics_region'] = form.cleaned_data['statics_region']
+            user_input['statics_percent_year'] = form.cleaned_data['statics_percent_year']
+            user_input['statics_count_year'] = form.cleaned_data['statics_count_year']
+            user_input['statics_percent_half'] = form.cleaned_data['statics_percent_half']
+            user_input['statics_count_half'] = form.cleaned_data['statics_count_half']
+            user_input['statics_percent_quarter'] = form.cleaned_data['statics_percent_quarter']
+            user_input['statics_count_quarter'] = form.cleaned_data['statics_count_quarter']
+
+            user_input['statics2_region'] = form.cleaned_data['statics2_region']
+            user_input['statics2_percent_year'] = form.cleaned_data['statics2_percent_year']
+            user_input['statics2_count_year'] = form.cleaned_data['statics2_count_year']
+            user_input['statics2_percent_half'] = form.cleaned_data['statics2_percent_half']
+            user_input['statics2_count_half'] = form.cleaned_data['statics2_count_half']
+            user_input['statics2_percent_quarter'] = form.cleaned_data['statics2_percent_quarter']
+            user_input['statics2_count_quarter'] = form.cleaned_data['statics2_count_quarter']
+
+            user_input['statics3_region'] = form.cleaned_data['statics3_region']
+            user_input['statics3_percent_year'] = form.cleaned_data['statics3_percent_year']
+            user_input['statics3_count_year'] = form.cleaned_data['statics3_count_year']
+            user_input['statics3_percent_half'] = form.cleaned_data['statics3_percent_half']
+            user_input['statics3_count_half'] = form.cleaned_data['statics3_count_half']
+            user_input['statics3_percent_quarter'] = form.cleaned_data['statics3_percent_quarter']
+            user_input['statics3_count_quarter'] = form.cleaned_data['statics3_count_quarter']
+
 
             excel_write().save_file(user_input)
 
